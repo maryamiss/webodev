@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background:#3498db;
+    text-align:center;
+}
+
+#oyuncu{
+    width:50px;
+    height:50px;
+    background:red;
+    position:absolute;
+    top:200px;
+    left:200px;
+}
+</style>
+</head>
+<body>
+    <h1 style="color:white;">Yön Tuşlarıyla Oyna</h1>
+
+<div id="oyuncu"></div>
+
+<a href="index.html">
+<button style="margin-top:500px;">Ana Menü</button>
+</a>
+
+<script>
+
+let kare = document.getElementById("oyuncu");
+
+let x = 200;
+let y = 200;
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key=="ArrowUp") y-=10;
+
+    if(e.key=="ArrowDown") y+=10;
+
+    if(e.key=="ArrowLeft") x-=10;
+
+    if(e.key=="ArrowRight") x+=10;
+
+    kare.style.left = x + "px";
+    kare.style.top = y + "px";
+});
+
+</script>
+
+</body>
+</html>
